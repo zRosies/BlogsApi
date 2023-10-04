@@ -1,0 +1,26 @@
+{
+    "contact":{
+        "firstName": "Gustavo",
+        "lastName":"Bispo",
+        "email": "haha@gmail.com",
+        "favoriteColor": "Green",
+        "birthday": "11/05/1999"
+    },
+    "contact2":{
+        "firstName": "Ana",
+        "lastName":"Benke",
+        "email": "hehe@gmail.com",
+        "favoriteColor": "Blue",
+        "birthday": "01/03/2000"
+
+    },
+    "contact3":{
+        "firstName": "John",
+        "lastName":"Mock",
+        "email": "lele@gmail.com",
+        "favoriteColor": "Yellow",
+        "birthday": "12/08/1980"        
+
+    }
+   
+}

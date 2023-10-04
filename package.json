@@ -1,0 +1,29 @@
+{
+  "name": "lesson2_personalassignment",
+  "version": "1.0.0",
+  "description": "contacts",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no teste speficied\" && exit 1",
+    "start-prod": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "aa"
+  ],
+  "author": "gustavo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "install": "^0.13.0",
+    "mongodb": "^6.1.0",
+    "nodemon": "^3.0.1",
+    "npm": "^10.1.0",
+    "package-name": "^0.1.0"
+  }
+}
