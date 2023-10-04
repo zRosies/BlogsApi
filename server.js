@@ -5,7 +5,7 @@ const mongodb = require("./db/connection");
 const route = require("./routes/route");
 const cors = require('cors');
 
-const port = process.env.Port || 8080;
+const port = process.env.PORT;
 
 const app = express();
 

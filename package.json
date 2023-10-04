@@ -8,6 +8,9 @@
     "test": "echo \"Error: no teste speficied\" && exit 1",
     "start-prod": "node server.js"
   },
+  "engines": {
+    "node": ">=18 <19"
+  },
   "repository": {
     "type": "git",
     "url": "git"
@@ -20,6 +23,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "install": "^0.13.0",
     "mongodb": "^6.1.0",
     "nodemon": "^3.0.1",
