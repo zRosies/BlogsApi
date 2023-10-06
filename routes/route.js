@@ -1,6 +1,7 @@
 const express= require("express");
 const router= express.Router();
 const contacts = require('../controllers/contactsData')
+const swagger = require("./swagger");
 
 const contactSwitch= express.Router();
 
@@ -14,6 +15,7 @@ contactSwitch.put('/:id', contacts.updateContact)
 
 
 router.use("/blog", contactSwitch);
+router.use("/api-docs", swagger)
 
 
 

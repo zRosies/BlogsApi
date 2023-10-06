@@ -1,0 +1,159 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "blog API",
+      "version": "1.0.0",
+      "description": "API for managing the conctacts CRUD requests"
+    },
+    "paths": {
+      "/blog": {
+        "get": {
+          "summary": "Get all blogs",
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {}
+              }
+            },
+            "404": {
+              "description": "No data found"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        },
+        "post": {
+          "summary": "Create a new blog",
+          "requestBody": {
+            "description": "blog object",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/blog"
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "blog created successfully"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        }
+      },
+      "/blog/{id}": {
+        "get": {
+          "summary": "Get a blog by ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "blog ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {}
+              }
+            },
+            "404": {
+              "description": "No data found"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        },
+        "put": {
+          "summary": "Update a blog by ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "blog ID"
+            }
+          ],
+          "requestBody": {
+            "description": "Updated blog object",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/blog"
+                }
+              }
+            }
+          },
+          "responses": {
+            "204": {
+              "description": "blog updated successfully"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete a blog by ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "description": "blog ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "blog deleted successfully"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "blog": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "author": {
+              "type": "string"
+            },
+            "body": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            }
+          
+          },
+          "required": ["title", "author", "body", "category"]
+        }
+      }
+    }
+  }

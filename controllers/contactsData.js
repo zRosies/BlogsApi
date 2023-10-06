@@ -111,9 +111,9 @@ const updateContact= async (req,res)=>{
   
     try{
         if (response.matchedCount === 1 && response.modifiedCount === 1) {
-            res.status(200).json({ message: 'Contact updated successfully' });
+            res.status(200).json({ message: 'Blog updated successfully' });
           } else {
-            res.status(404).json({ message: 'Contact not found' });
+            res.status(404).json({ message: 'Blog not found' });
           }
     }catch(error){
         console.error('Error querying the database:', error);

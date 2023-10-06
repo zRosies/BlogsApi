@@ -14,10 +14,9 @@ const corsOptions = {
     optionsSuccessStatus: 200, 
 };
 
-app.use(cors(corsOptions))
-
 
 app
+    .use(cors(corsOptions))
     .use(parser.json())
     .use((req,res,next)=>{
         res.setHeader("Access-Control-Allow-Origin", "*");
@@ -36,24 +35,4 @@ mongodb.initDb((err, mongodb)=>{
 
 })
 
-app.post("/blogs", (req, res) => {
-    const blogData = req.body;
-
-    // Use the MongoDB client obtained from the initialization
-    const db = mongodb.getDb();
-
-    // Access the "blog" collection
-    const blogCollection = db.collection("blog").find().toArray(); // Replace with your actual collection name
-
-    // Insert the new blog entry into the collection
-    blogCollection.insertOne(blogData, (err, result) => {
-        if (err) {
-            console.error("Error inserting blog data:", err);
-            res.status(500).json({ error: "Internal server error" });
-        } else {
-            console.log("New blog added:", result.ops[0]);
-            res.status(201).json(result.ops[0]);
-        }
-    });
-});
 
