@@ -1,9 +1,9 @@
 {
     "openapi": "3.0.0",
     "info": {
-      "title": "blog API",
+      "title": "Blog API OAS",
       "version": "1.0.0",
-      "description": "API for managing the conctacts CRUD requests"
+      "description": "API for managing the blogs CRUD requests"
     },
     "paths": {
       "/blog": {
